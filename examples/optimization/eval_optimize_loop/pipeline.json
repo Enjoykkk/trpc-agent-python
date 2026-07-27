@@ -1,0 +1,35 @@
+{
+  "schema_version": "v1",
+  "acceptance_metrics": {
+    "metrics": [
+      {"metric_name": "final_response_avg_score", "threshold": 1.0},
+      {"metric_name": "tool_trajectory_avg_score", "threshold": 1.0},
+      {"metric_name": "llm_rubric_response", "threshold": 0.8},
+      {"metric_name": "llm_rubric_knowledge_recall", "threshold": 0.8}
+    ],
+    "num_runs": 1
+  },
+  "gate": {
+    "min_validation_score_gain": 0.05,
+    "min_validation_pass_rate_gain": 0.0,
+    "max_single_metric_regression": 0.0,
+    "forbid_new_hard_fail": true,
+    "protected_case_ids": ["val_critical_refund"],
+    "protected_metric_names": ["tool_trajectory_avg_score", "llm_rubric_knowledge_recall"],
+    "overfit_guard": true,
+    "max_cost_usd": 0.1,
+    "max_duration_seconds": 180
+  },
+  "hard_fail_categories": [
+    "execution_error",
+    "wrong_tool_call",
+    "wrong_tool_arguments",
+    "format_violation"
+  ],
+  "writeback": {
+    "enabled": false,
+    "require_explicit_apply": true,
+    "require_source_hash_match": true
+  },
+  "report": {"include_raw_trace": true, "max_trace_items_per_case": 20}
+}

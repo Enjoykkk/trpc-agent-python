@@ -1,0 +1,8 @@
+{
+  "eval_set_id": "order_support_trace_candidate",
+  "eval_cases": [
+    {"eval_id": "val_generalize_order_id", "eval_mode": "trace", "actual_conversation": []},
+    {"eval_id": "val_missing_order_id", "eval_mode": "trace", "actual_conversation": []},
+    {"eval_id": "val_critical_refund", "eval_mode": "trace", "actual_conversation": []}
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "eval_set_id": "order_support_train",
+  "eval_cases": [
+    {"eval_id": "train_order_status", "conversation": [{"invocation_id": "train-1", "user_content": {"role": "user", "parts": [{"text": "查询订单 A100 的状态。"}]}, "final_response": {"role": "model", "parts": [{"text": "订单 A100 已发货。"}]}}]},
+    {"eval_id": "train_refund_policy", "conversation": [{"invocation_id": "train-2", "user_content": {"role": "user", "parts": [{"text": "已发货订单还可以申请退款吗？"}]}, "final_response": {"role": "model", "parts": [{"text": "需要查询退款政策，不能编造规则。"}]}}]},
+    {"eval_id": "train_json_output", "conversation": [{"invocation_id": "train-3", "user_content": {"role": "user", "parts": [{"text": "查询订单 A100，并只用 JSON 返回订单号和状态。"}]}, "final_response": {"role": "model", "parts": [{"text": "{\"order_id\": \"A100\", \"status\": \"shipped\"}"}]}}]}
+  ]
+}

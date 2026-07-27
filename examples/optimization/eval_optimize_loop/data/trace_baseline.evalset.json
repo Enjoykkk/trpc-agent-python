@@ -1,0 +1,8 @@
+{
+  "eval_set_id": "order_support_trace_baseline",
+  "eval_cases": [
+    {"eval_id": "val_generalize_order_id", "eval_mode": "trace", "actual_conversation": [{"invocation_id": "trace-1", "user_content": {"role": "user", "parts": [{"text": "帮我看看订单 A200 现在是什么状态。"}]}, "final_response": {"role": "model", "parts": [{"text": "无法确认"}]}}]},
+    {"eval_id": "val_missing_order_id", "eval_mode": "trace", "actual_conversation": [{"invocation_id": "trace-2", "user_content": {"role": "user", "parts": [{"text": "帮我查询一下我的订单。"}]}, "final_response": {"role": "model", "parts": [{"text": "订单 A100 已发货"}]}}]},
+    {"eval_id": "val_critical_refund", "eval_mode": "trace", "actual_conversation": [{"invocation_id": "trace-3", "user_content": {"role": "user", "parts": [{"text": "订单 A200 已经完成，还能无条件退款吗？"}]}, "final_response": {"role": "model", "parts": [{"text": "需要审核，不能无条件退款"}]}}]}
+  ]
+}

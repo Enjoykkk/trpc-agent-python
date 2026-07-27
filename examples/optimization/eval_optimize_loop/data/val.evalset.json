@@ -1,0 +1,8 @@
+{
+  "eval_set_id": "order_support_validation",
+  "eval_cases": [
+    {"eval_id": "val_generalize_order_id", "conversation": [{"invocation_id": "val-1", "user_content": {"role": "user", "parts": [{"text": "帮我看看订单 A200 现在是什么状态。"}]}, "final_response": {"role": "model", "parts": [{"text": "订单 A200 已完成。"}]}}]},
+    {"eval_id": "val_missing_order_id", "conversation": [{"invocation_id": "val-2", "user_content": {"role": "user", "parts": [{"text": "帮我查询一下我的订单。"}]}, "final_response": {"role": "model", "parts": [{"text": "请提供订单号，我不能猜测订单信息。"}]}}]},
+    {"eval_id": "val_critical_refund", "conversation": [{"invocation_id": "val-3", "user_content": {"role": "user", "parts": [{"text": "订单 A200 已经完成，还能无条件退款吗？"}]}, "final_response": {"role": "model", "parts": [{"text": "已完成订单不支持无条件退款，需要查询订单和退款政策审核。"}]}}]}
+  ]
+}

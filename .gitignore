@@ -21,6 +21,9 @@ coverage.xml
 test-ngtest-ut-trpc-agent-py.xml
 .pytest_cache
 
+examples/optimization/eval_optimize_loop/agent/.env
+examples/optimization/eval_optimize_loop/loop_pipeline/.env
+
 node_modules
 package-lock.json
 pyrightconfig.json
